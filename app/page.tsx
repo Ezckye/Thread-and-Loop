@@ -22,6 +22,8 @@ const steps = [
   ["Loop", "Keep your favourites, return the rest, and make every future edit sharper."],
 ];
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function Home() {
   return (
     <main className="site-shell">
@@ -67,7 +69,7 @@ export default function Home() {
           <div className="arch arch-middle" aria-hidden="true" />
           <div className="arch arch-inner" aria-hidden="true" />
           <div className="logo-stage">
-            <img src="/thread-loop-logo-transparent.png" alt="Thread and Loop logo" />
+            <img src={`${basePath}/thread-loop-logo-transparent.png`} alt="Thread and Loop logo" />
           </div>
           <aside className="plan-card" aria-label="Loop One membership">
             <div className="plan-card-top">
